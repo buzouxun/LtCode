@@ -1,9 +1,9 @@
 package easy;
 
-public class ID_4_PalindromeNumber {
+public class ID_04_PalindromeNumber {
 
 	public static void main(String[] args) {
-		ID_4_PalindromeNumber problem = new ID_4_PalindromeNumber();
+		ID_04_PalindromeNumber problem = new ID_04_PalindromeNumber();
 		boolean test = false;
 
 		// 1 -> true

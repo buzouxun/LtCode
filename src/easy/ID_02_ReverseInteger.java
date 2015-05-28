@@ -1,9 +1,9 @@
 package easy;
 
-public class ID_2_ReverseInteger {
+public class ID_02_ReverseInteger {
 
 	public static void main(String[] args) {
-		ID_2_ReverseInteger problem = new ID_2_ReverseInteger();
+		ID_02_ReverseInteger problem = new ID_02_ReverseInteger();
 		int test = -1;
 
 		// 123 -> 321

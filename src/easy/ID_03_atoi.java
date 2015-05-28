@@ -1,9 +1,9 @@
 package easy;
 
-public class ID_3_atoi {
+public class ID_03_atoi {
 
 	public static void main(String[] args) {
-		ID_3_atoi problem = new ID_3_atoi();
+		ID_03_atoi problem = new ID_03_atoi();
 		int test = -1;
 
 		// char has to be one of '0', '1', '2', ... , '9'

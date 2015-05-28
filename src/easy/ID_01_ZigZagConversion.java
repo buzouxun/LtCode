@@ -1,6 +1,6 @@
 package easy;
 
-public class ID_1_ZigZagConversion {
+public class ID_01_ZigZagConversion {
 
 	/*
 	 * define Zigzag pattern
@@ -20,7 +20,7 @@ public class ID_1_ZigZagConversion {
 	 */
 
 	public static void main(String[] args) {
-		ID_1_ZigZagConversion problem = new ID_1_ZigZagConversion();
+		ID_01_ZigZagConversion problem = new ID_01_ZigZagConversion();
 		String test = "";
 		// ABC, 1 -> ABC
 		test = problem.new Solution().convert("ABC", 1);

@@ -16,20 +16,30 @@ public class ID_49_ReverseLinkedList {
 		}
 
 		private ListNode reverseListIterative(ListNode head) {
-			ListNode newHeader = new ListNode(-1);
+			ListNode newHeader = null;
 			ListNode newTailer = null;
-			newHeader.next = newTailer;
 			while(head != null) {
+				ListNode tmp = head.next;
 				newHeader = head;
 				newHeader.next = newTailer;
 				newTailer = newHeader;
+				head = tmp;
 			}			
 			return newHeader;
 		}
 
 		private ListNode reverseListRecursive(ListNode head) {
 			ListNode res = null;
-
+			if(head == null || head.next == null) {
+				res = head;
+			}
+			else {
+				ListNode head_next = head.next;
+				ListNode tmp = reverseListRecursive(head_next);
+				head_next.next = head;		
+				head_next.next.next = null;
+				res = tmp;
+			}
 			return res;
 		}
 	}

@@ -7,4 +7,12 @@ public class ID_052_LongestSubstringWithoutRepeatingCharacters {
 
 	}
 
+	class Solution {
+		public int lengthOfLongestSubstring(String s) {
+			int res = 0;
+			
+			return 0;
+		}
+	}
+
 }

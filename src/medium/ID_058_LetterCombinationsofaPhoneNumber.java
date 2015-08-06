@@ -16,8 +16,8 @@ public class ID_058_LetterCombinationsofaPhoneNumber {
 		public List<String> letterCombinations(String digits) {
 			List<String> combos = new ArrayList<String> ();
 			String[] map = new String[]{
-					" ",		// 0
-					" ",		// 1
+					"",			// 0
+					"",			// 1
 					"abc",		// 2
 					"def",		// 3
 					"ghi",		// 4
@@ -27,42 +27,46 @@ public class ID_058_LetterCombinationsofaPhoneNumber {
 					"tuv",		// 8
 					"wxyz"		// 9					
 			};
-			String[] combo = new String[]{""};
-			bt(digits, combos, combo, map);
+			//			String[] combo = new String[]{""};
+			String combo = "";
+			if(digits == "" || digits == null || digits.length() == 0) {
+
+			}
+			else {
+				bt(digits, combos, combo, map);
+			}
 			return combos;
 		}
 
-		private void bt(String digits, List<String> combos, String[] combo, String[] map) {
+		private void bt(String digits, List<String> combos, String combo, String[] map) {
 			if (reject(digits, combos, combo, map)) {
-				// TODO
+				// terminate if a combo is found
+				combos.add(new String(combo).trim());
+				combo = new String(combo.substring(0, combo.length() - 1));
 				return;
 			}
 			if (accept(digits, combos, combo, map)) {
 				output(digits, combos, combo, map);
-				//				System.out.println("comboooo = " + combo[0]);
 			}
 			//s <- first(problem)
 			int i = 0;
-			while(i < map[digits.charAt(combo[0].length()) - '0'].length()) {
-				combo[0] = combo[0] + map[digits.charAt(combo[0].length()) - '0'].toCharArray()[i];
-				bt(digits, combos, combo, map);
-				//s <- next(problem)
+			while(i < map[digits.charAt(combo.length()) - '0'].length()) {
+				String new_combo = new String(combo + map[digits.charAt(combo.length()) - '0'].toCharArray()[i]);
+				bt(digits, combos, new_combo, map);
 				i ++;
 			}
 		}
 
-		private boolean reject(String digits, List<String> combos, String[] combo, String[] map) {
-			return combo[0].length() == digits.length();
+		private boolean reject(String digits, List<String> combos, String combo, String[] map) {
+			return combo.length() == digits.length();
 		}
 
-		private boolean accept(String digits, List<String> combos, String[] combo, String[] map) {
-			return combo[0].length() > digits.length();
+		private boolean accept(String digits, List<String> combos, String combo, String[] map) {
+			return combo.length() < digits.length();
 		}
 
-		private void output(String digits, List<String> combos, String[] combo, String[] map) {
-//			combos.add(new String(combo[0]).trim());
-//			System.out.println("combo = " + combo[0]);
-//			combo[0] = "";
+		private void output(String digits, List<String> combos, String combo, String[] map) {
+			// do nothing
 		}
 	}
 }

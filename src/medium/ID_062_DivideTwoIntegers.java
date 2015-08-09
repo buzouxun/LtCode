@@ -6,7 +6,7 @@ public class ID_062_DivideTwoIntegers {
 		ID_062_DivideTwoIntegers problem = new ID_062_DivideTwoIntegers();
 
 		//		System.out.println("divide(10, 3) = " + problem.new Solution().divide(10, -2));
-		System.out.println("divide(-2147483648, 2) = " + problem.new Solution().divide(-2147483648, 2));
+//		System.out.println("divide(-2147483648, 2) = " + problem.new Solution().divide(-2147483648, 2));
 
 		//		System.out.println(Integer.SIZE);  -2147483648, 2
 		//		System.out.println(Integer.MAX_VALUE);

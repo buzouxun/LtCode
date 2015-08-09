@@ -16,15 +16,6 @@ public class ID_064_SearchforaRange {
 			if(nums.length == 0) {
 				res = new int[]{-1, -1};
 			}
-//			else if (nums.length == 1) {
-//				if(nums[0] == target) {
-//					res[0] = 0;
-//					res[1] = 0;
-//				}
-//				else {
-//					res = new int[]{-1, -1};
-//				}
-//			}
 			else {
 				int startIndex = 0;
 				int endIndex = nums.length - 1;

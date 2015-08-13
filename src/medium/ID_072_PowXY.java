@@ -24,10 +24,10 @@ public class ID_072_PowXY {
 				}
 				x *= x;
 				n = n >> 1;
-				System.out.println("res = " + res);
-				System.out.println("x = " + x);
-				System.out.println("n = " + n);
-				System.out.println("");
+//				System.out.println("res = " + res);
+//				System.out.println("x = " + x);
+//				System.out.println("n = " + n);
+//				System.out.println("");
 			}
 			return res;
 		}

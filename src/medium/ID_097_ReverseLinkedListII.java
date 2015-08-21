@@ -43,12 +43,20 @@ public class ID_097_ReverseLinkedListII {
 
 			ListNode res = new ListNode(-1);
 			res.next = head;
-			int i = 0;
-			ListNode tmp = head;
 			ListNode start = res;
 			ListNode r_tail = null;
 			ListNode r_head = null;
-//			for(int i = )
+			for(int i = 0; i < m - 1; i++) {
+				start = start.next;
+			}
+			for(int i = 0; i < n - m; i++) {
+				
+				r_tail.next = r_head.next;
+				r_head.next = start.next;
+				start.next = r_head;
+				// reset r_head
+				r_head = r_tail.next;
+			}
 			return res.next;
 		}
 	}

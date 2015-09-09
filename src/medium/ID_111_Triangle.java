@@ -13,14 +13,15 @@ public class ID_111_Triangle {
 
 	class Solution {
 		public int minimumTotal(List<List<Integer>> triangle) {
-			int[] rows = new int[triangle.size()];
-			for(int i = 1; i < triangle.size(); i++) {
-				for(int j = 0; j < triangle.get(i).size(); j++) {
-					
+			int[] array = new int[triangle.size() + 1];
+			// 4, 3, 2, 1
+			for(int i = triangle.size(); i >= 1; i--) {
+				// 4, 3, 2, 1
+				for(int j = 0; j < triangle.get(i - 1).size(); j++) {
+					array[j] = Math.min(array[j], array[j+1]) + triangle.get(i-1).get(j);					
 				}
 			}			
-			return rows[triangle.size() - 1];
+			return array[0];
 		}
-
 	}
 }

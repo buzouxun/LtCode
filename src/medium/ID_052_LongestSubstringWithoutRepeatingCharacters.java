@@ -13,7 +13,9 @@ public class ID_052_LongestSubstringWithoutRepeatingCharacters {
 		//		System.out.println("'abccbcxyz' = " + problem.new Solution().lengthOfLongestSubstring("abccbcxyz"));
 
 	}
-	class Solution {
+	
+	class Solution {		
+		
 		public int lengthOfLongestSubstring(String s) {
 			int maxLength = 0;
 			if(s.length() == 0 || s.length() == 1) {
